@@ -1,0 +1,4 @@
+/* 문서전체  다른 파일로 만들면 재사용 용이*/
+
+body { background-color: darkkhaki;}
+body > button.btn.btn-danger {text-align: center;}

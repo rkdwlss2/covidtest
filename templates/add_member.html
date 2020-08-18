@@ -1,0 +1,22 @@
+{% extends 'layout_member.html' %}
+
+{%block contents %}
+<h1 class="text-center">add member start page</h1>
+<form action="/add_pro" method="POST">
+    <div class="form-group">
+        <label for="userId">userID</label>
+        <input type="text" class="form-control" placeholder="EnterUSERID" id="USERID" name="userId">
+    </div>
+    <div class="form-group">
+        <label for="userName">userName:</label>
+        <input type="text" class="form-control" placeholder="userName" id="userName" name="userName">
+    </div>
+    <div class="form-group">
+        <label for="pwd">password:</label>
+        <input type="password" class="form-control" placeholder="password" id="pwd" name="pwd">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary">reset</button>
+</form>
+{% endblock %}

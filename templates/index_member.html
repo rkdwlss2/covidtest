@@ -1,0 +1,29 @@
+{% extends 'layout_member.html' %}
+
+{%block contents %}
+<h1 class="text-center">member start page</h1>
+{% if session['userId'] %}
+<table class="table">
+    <tr class="table-info">
+        <th>userNo</th>
+        <th>userId</th>
+        <th>userName</th>
+        <th>name</th>
+    </tr>
+    {% for row in member_list%}
+    <tr>
+        <td>{{row.userNo}}</td>
+        <td>{{row.userId}}</td>
+        <td>{{row.userName}}</td>
+        <td>{{row.pwd}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<hr>
+<h2>
+    <a href="/login" class="btn btn-dark">MEMBER LOGIN</a>
+</h2>
+{%endif%}
+
+{%endblock%}

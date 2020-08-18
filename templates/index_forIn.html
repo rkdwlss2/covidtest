@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>for i in .. / for key in .. </title>
+</head>
+
+<body>
+    <h1>집합형 자료 출력하기</h1>
+    <hr>
+    <h2>리스트 출력하기</h2>
+    <p>{{myList}}</p>
+    <ul>
+        {% for i in myList %}
+        <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+    <h2>딕셔너리 출력하기</h2>
+    <p>{{myDict}}</p>
+    <ul>
+        {% for key in myDict %}
+        <li>{{key}} => {{myDict[key]}}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

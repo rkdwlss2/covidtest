@@ -1,0 +1,21 @@
+---------------------------------------------------
+29. 템플릿 상속 + 부트스트랩
+---------------------------------------------------
+// static 폴더안에 부트스트랩 소스 저장 후 연결하기
+<!-- 뷰포트 설정 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 부트스트랩 연결 -->
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+
+
+
+실습 소스 >>
+step20/templates/layout.html
+step20/templates/home.html
+step20/templates/about.html
+step20/templates/bbs.html
+step20/templates/new.html
+step20/app.py

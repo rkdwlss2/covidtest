@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 결과 출력하기</title>
+    <style>
+        /* table안의 모든 th 태그 디자인 */
+        table th { background-color:lightgray}
+        /* border-collapse : 셀병합디자인 */
+        table { border-collapse: collapse;}
+        /* table안의 모든 th, td 태그 디자인 */
+        /* border:굵기 색상 스타일 */
+        table th, table td { border: 1px solid gray}
+        h1, h2, td { text-align:center }
+        /* 클래스 선택자  */
+        /* padding:상하 좌우 => 안쪽 여백 */
+        /* border-radius:모서리굴리기  */
+        .btn { background-color:black; color:white; 
+              padding:5px 10px; border-radius: 5px;
+              text-decoration: none; }
+        span { color:red; font-weight: bold;}
+    </style>
+
+</head>
+<body>
+    <h1> <span>{{ country_name }} </span> 검색 결과</h1>
+    <hr>
+    <h2>총 레코드수 : {{totalCount}} </h2>
+    <hr>
+    <table cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <th>No</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>GNP</th>
+            <th>Population</th>
+        </tr>
+        {% for temp_dic in country_list %}
+            <tr>
+                <td>{{temp_dic.No}}</td>
+                <td>{{temp_dic.Code}}</td>
+                <td>
+                     {{temp_dic.Name}}
+                </td>
+                <td>$ {{temp_dic.GNP}}</td>
+                <td>{{temp_dic.Population}}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="5">
+            <a href="/" class="btn">첫번째 페이지로 이동</a>
+            </td>
+        </tr>  
+    </table>
+
+    
+</body>
+</html>

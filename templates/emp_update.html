@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emp update page</title>
+ 
+</head>
+<body>
+    <h1>emp update page</h1>
+    
+<form action="/emp_update_pro" method="post">
+    <!-- hidden 필드로 지정  -->
+    <input type="hidden" name="c_no" value={{ emp_dict.No }}>
+    <label>first_name <input type="text" name="c_first_name" id="c_first_name" value={{ emp_dict.first_name }} required ></label>
+    <label>last_name <input type="text" name="c_last_name" id="c_last_name" value={{ emp_dict.last_name }} required></label>
+    <label>gender <input type="text" name="c_gender" id="c_gender" value={{ emp_dict.gender }} required></label>
+    <label>birth <input type="text" name="c_birth" id="c_birth" value={{ emp_dict.birth }} required></label>
+
+    <br>
+    <button type="submit"> SUBMIT </button>
+    <button type="reset"> RESET </button>
+  </form>
+</body>
+</html>

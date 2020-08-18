@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Design</title>
+    <!-- 인라인 방식의 css 적용 -->
+    <!-- stype="속성:값" -->
+    <h1 style="text-align: center;">bootstrap</h1>
+    <!-- 부트스트램 연결 -->
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+
+
+    <!-- 사용자 정의 css파일 연결 -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+<body>
+    <button type="button" class="btn btn-info">Info</button>
+    <!-- {}태그내용
+    태그[속성=값]
+    태그1>태그2
+    태그1+태그2 같은 레벨
+    * 반복
+    $ 자동증가숫자
+    -->
+    <button>Button1</button>
+    <button>Button2</button>
+    <button>Button3</button>
+    <button>Button4</button>
+    <button>Button5</button>
+    <!-- 클래스 -->
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-link">Link</button> 
+
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button>
+    <button type="button" class="btn btn-outline-light text-dark">Light</button>
+    
+    <hr>
+    <!-- ul>(li>a{Menu$})*3 -->
+    <ul>
+        <li><a href="#" class="btn btn-outline-success">Menu1</a></li>
+        <li><a href="#" class="btn btn-outline-danger btn-sm">Menu2</a></li>
+        <li><a href="#" class="btn btn-link btn-lg">Menu3</a></li>
+    </ul>
+
+    <!-- table>(tr>td{데이터$}*3)*3 -->
+    <table class="table">
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+        <tr>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+    </table>
+    <table class="table table-dark table-hover">
+        <tr>
+            <th>머릿말</th>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+        <tr>
+            <th>머릿말</th>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+        <tr>
+            <th>머릿말</th>
+            <td>데이터1</td>
+            <td>데이터2</td>
+            <td>데이터3</td>
+        </tr>
+    </table>
+    <!-- 테이블명.클래스명 -->
+    <table class="table"></table>
+    <!-- 테이블명#아이디명 -->
+    <table class="table table-bordered">
+        <tr>
+            <td style="background-color: tomato;color: white;">data1</td>
+            <td>data2</td>
+            <td>data3</td>
+            <td>data4</td>
+        </tr>
+        <tr>
+            <td>data1</td>
+            <td>data2</td>
+            <td>data3</td>
+            <td>data4</td>
+        </tr>
+    </table>
+    <hr>
+    <h2 class="text-center">이미지디자인</h2>
+    <img src="/static/images/course01.jpg" alt="course01" width="200" height="150">
+    <img src="/static/images/course01.jpg" class="rounded" alt="course01" width="200" height="150">
+    <img src="/static/images/course01.jpg" class="rounded-circle" alt="course01" width="200" height="150">
+    <img src="/static/images/course01.jpg" class="img-thumbnail" alt="course01" width="200" height="150">
+
+    <h2>문단 디자인</h2>
+    <h3 class="text-center">문단</h3>
+    <h3 class="text-right">문단</h3>
+    <!-- form>(div>(label{제목$}+input))*3 -->
+    <form action="/">
+        <div class="form-group">
+            <label for="t1">제목1</label>
+            <input class="form-control" type="text" id="t1">
+        </div>
+        <div class="form-group">
+            <label for="t2">제목2</label>
+            <input class="form-control" type="text" id="t2">
+        </div>
+        <div class="form-group">
+            <label for="t3">제목3</label>
+            <input class="form-control"  type="text" id="t3">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="submit" class="btn btn-primary">
+            <input type="reset" value="reset" class="btn btn-danger">
+        </div>
+    </form>
+    <hr>
+    <h2>Nav-item</h2>
+    <!-- ul>(li>a{manu#})*4 -->
+    <!-- ul>(li.nav-item>a.nav-link[href=#]{menu$})*4 -->
+    <!-- 중앙정렬 -->
+    <!-- <ul class="nav justify-content-center"> -->
+    <!-- 오른쪽 정렬 -->
+    <!-- <ul class="nav justify-content-end"> -->
+    <!-- <ul class="nav justify-content-center">
+        <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">menu3</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">menu4</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane container active" id="home"><h2>Home</h2>
+            <p>Home Contents</p></div>
+        
+        <div class="tab-pane container fade" id="menu1"><h2>Home</h2>
+            <p>Home Contents</p></div>
+        
+        <div class="tab-pane container fade" id="menu2"><h2>Home</h2>
+            <p>Home Contents</p></div>
+        
+        <div class="tab-pane container fade" id="menu3"><h2>Home</h2>
+            <p>Home Contents</p></div>
+        
+    </div> -->
+  
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-coffee"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i> 
+    <hr>
+    <h2>아이콘 디자인</h2>
+    <p>contact <i class="fas fa-envelope">mail</i>adimin@test.com</p>
+    <div class="container mt-3">
+
+        <h2>Carousel</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ul>
+          
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/static/images/la.jpg" alt="Los Angeles" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="/static/images/chicago.jpg" alt="Chicago" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="/static/images/ny.jpg" alt="New York" width="1100" height="500">
+            </div>
+            <div class="carousel-item"
+                style="width: 1100px; height: 500px; overflow: hidden;"
+            >
+                <img src="/static/images/course01.jpg" alt="New York" width="1100" height="500">
+              </div>
+              <div class="carousel-item"
+                style="width: 1100px; height: 500px; overflow: hidden;"
+            >
+                <img src="/static/images/course02.jpg" alt="New York" width="1100" height="500">
+              </div>
+          </div>
+          
+          
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+        
+        </div>
+</body>
+</html>

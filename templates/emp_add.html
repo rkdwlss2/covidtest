@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레코드 추가</title>
+    <style>
+        /* 블록요소 스타일로 변경 세로 블록으로 변경됨 */
+        label {display: block}
+        /* 모든 요소 중앙정렬 */
+        * {text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>레코드 추가</h1>
+    <hr>
+    <form action="/emp_add_pro" method="post">
+        <label>FIRST_NAME<input type="text" name="c_first_name" required></label>
+        <label>LAST_NAME<input type="text" name="c_last_name" required></label>
+
+        <label>gender<input type="text" name="c_gender" required></label>
+        <label>birth<input type="text" name="c_birth" required></label>
+        <br>
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+    </form>
+    <hr>
+    <p><a href="/">첫페이지로 이동</a></p>
+</body>
+</html>

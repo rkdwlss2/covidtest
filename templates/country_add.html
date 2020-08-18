@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레코드 추가</title>
+    <style>
+        /* 블록요소 스타일로 변경. 세로 레이아웃 */
+        label { display: block}
+        /* 모든 요소 중앙정렬 */
+        * { text-align: center;}
+    </style>
+</head>
+<body>
+<h1>레코드 추가</h1>
+<hr>
+<form action="/country_add_pro" method="post">
+    <label>CODE <input type="text" name="c_code" required></label>
+    <label>NAME <input type="text" name="c_name" required></label>
+    <label>GNP <input type="text" name="c_gnp" required></label>
+    <label>POPULATION <input type="text" name="c_population" required></label>
+    <br>
+    <input type="submit" value="전송"> 
+    <input type="reset" value="취소"> 
+</form>
+<hr>
+<p><a href="/">첫페이지로 이동</a></p>
+</body>
+</html>

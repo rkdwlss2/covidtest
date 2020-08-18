@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 출력하기</title>
+    <style>
+        /* table 안의 모든 th 태그 디자인 */
+        table th { background-color: lightgray;}
+        table {border-collapse: collapse;}
+        table th, table td{border: 1px solid darkblue}
+        h1,h2{text-align: center;}
+        /* padding : 상하 좌우 => 안쪽 여백 */
+        /* border radius:모서리 굴리기 */
+        .btn {background-color: black;color: whitesmoke;padding: 5px 10px;border-radius: 5px;text-decoration: none;}
+        /* 폼테그 */
+        form {text-align: center;}
+        form input {border:1px solid black;padding: 5px;}
+        /* 레코드 추가 버튼 정렬 */
+        .add {text-align: right;}
+    </style>
+</head>
+<body>
+    <h1> EMP 테이블 전체 조회</h1>
+    <hr>
+  
+    
+    <hr>
+    <!-- {{country_list}} -->
+    <hr>
+    <h2>총 레코드 수 : {{totalCount}}</h2>
+    <hr>
+    <p class="add"><a href="/emp_add" class="btn">레코드 추가</a></p>
+    <!-- table>(tr>th*5) controll+spacebar -->
+    
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+
+
+        
+        <tr>
+            <th>NO</th>
+            <th>NAME</th>
+            <th>detailView</th>
+            <th>delete</th>
+            <th>Update</th>
+        </tr>
+    {%for temp_dic in emp_list %}
+        <tr>
+            <td>{{temp_dic.No}}</td>
+            <td>{{temp_dic.first_name}}{{temp_dic.last_name}}</td>
+            <!-- 각 레코드 사엣 페이지로 이동하는 하이퍼 링크 -->
+            <td><a href="/emp_view/{{temp_dic.No}}" class="btn">detail page</a></td>
+            <td><a href="/emp_delete/{{temp_dic.No}}" class="btn">Delete page</a></td>
+  <!-- 수정페이지 연결 하이퍼링크 셀 추가  -->
+            <td><a href="/emp_update/{{temp_dic.No}}" class="btn">Update Page</a></td>
+        </tr>
+    {%endfor%}
+    </table>
+    
+
+
+</body>
+</html>

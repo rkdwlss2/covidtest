@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>if.. else 조건문 이용하기 </title>
+</head>
+
+<body>
+    <h1>if 조건문 이용하기</h1>
+    <hr>
+    <h2>두수의 값 비교하기</h2>
+    <p>a={{a}}, b={{b}}</p>
+    {% if a>b %}
+    <p>a가 크다</p>
+    {% elif a<b %}
+    <p>b가 크다</p>
+    {% else %}
+    <p>a와 b는 같은 값이다.</p>
+    {% endif %}
+    <hr>
+    <h2>홀수 짝수 출력하기</h2>
+    <p>데이값 => {{c}}</p>
+    {% if c%2==0 %}
+    <p>짝수이다.</p>
+    {% else %}
+    <p>홀수이다.</p>
+    {% endif %}
+
+    <hr>
+    <h2>나이에 따라 메세지 출력하기</h2>  
+    <!-- 퀴즈 : userAge 
+        userAge < 8 => 유아 
+        8 <= userAge <= 13 => 초등학생
+        14 <= userAge <= 16 => 중학생
+        17 <= userAge <= 19 => 고등학생
+        userAge >=20  => 성인
+    -->
+    {% if userAge < 8 %}
+    <p>{{userAge}} => 유아</p>
+    {% elif 8 <= userAge <= 13 %}
+    <p>{{userAge}} => 초등학생</p>
+    {% elif 14 <= userAge <= 16 %}
+    <p>{{userAge}} => 중학생</p>
+    {% elif 17 <= userAge <= 19 %}
+    <p>{{userAge}} => 고등학생</p>
+    {% else %}
+     <p>{{userAge}} => 성인</p>
+    {% endif %}
+</body>
+
+</html>

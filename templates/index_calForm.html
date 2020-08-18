@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title> 두개의 숫자 받아서 사칙연산하기 </title>
+</head>
+
+<body>
+    <h1>두개의 숫자 받아서 사칙연산하기</h1>
+    <hr>
+    <form action="/cal" method="POST">
+        <p>
+            <label for="data1">숫자1 : </label>
+            <input type="text" name="data1" id="data1" placeholder="data1">
+        </p>
+        <p>
+            <label for="data2">숫자2 : </label>
+            <input type="text" name="data2" id="data2" placeholder="data2">
+        </p>
+        <button>결과보기</button>
+    </form>
+    <hr>
+    <h2>구구단 출력하기</h2>
+    <hr>
+    <form action="/gugu" method="POST">
+        <p>
+            <label for="data3">구구단 숫자 => </label>
+            <input type="text" name="data3" id="data3" placeholder="data3">
+        </p>
+        <button>결과보기</button>
+    </form>
+    <hr>
+    <h2>1부터 n까지의 누적합 구하기</h2>
+    <!-- 숫자n을 입력받아서 1~n까지 누적합 출력하기 
+    숫자 => 100
+    1~100까지의 합은? ....
+    -->
+    <hr>
+    <form action="/total" method="POST">
+        <p>
+            <label for="data4">누적합 숫자 => </label>
+            <input type="text" name="data4" id="data4" placeholder="data4">
+        </p>
+        <button>결과보기</button>
+    </form>
+
+    <hr>
+    <h1>GET 방식으로 데이타 전달하기</h1>
+    <form action="/info" method="GET">
+        <p>
+            <label for="userName">학생이름</label>
+            <input type="text" name="userName" id="userName" 
+                    placeholder="userName">
+        </p>
+        <p>
+            <label for="userAge">나이</label>
+            <input type="text" name="userAge" id="userAge" 
+                    placeholder="userAge">
+        </p>
+        <button>결과보기</button>
+    </form>
+    <hr>
+    <h1>쿼리스트링 방식으로 데이타 전달하기</h1>
+    <ul>
+        <li><a href="/resultTotal/50">1~50까지 합구하기 </a></li>
+        <li><a href="/resultTotal/100">1~100까지 합구하기 </a></li>
+        <li><a href="/resultTotal/1000">1~1000까지 합구하기 </a></li>
+    </ul>
+
+
+</body>
+
+</html>

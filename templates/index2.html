@@ -1,0 +1,19 @@
+<!--layout.html 공통부분 상속 -->
+{% extends 'layout.html' %}
+
+<!-- 교체영역1 -->
+{% block pageTitle %}
+<h1> Home </h1>
+{% endblock %}
+
+<!-- 교체영역2 -->
+{% block contents %}
+<!-- 서버 기준으로 이미지 삽입 -->
+<img src="static/images/ah.png" alt="메인 이미지">
+<!-- html 문서 기준으로 이미지 삽입 -->
+<img src="../static/images/ah.png" alt="메인 이미지">
+<!-- static 폴더안에 이미지 없는 경우 이미지가 보이지 않는다. 
+    <img src="../anger.png" alt="anger">
+-->
+{% endblock %}
+

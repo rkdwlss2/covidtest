@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET 방식으로 데이타 전달하기</title>
+</head>
+<body>
+<h1>GET 방식으로 데이타 전달하기</h1>
+<hr>
+<h2>GET 방식으로 URL에 데이터 전달하기</h2>
+<!-- 하이퍼링크 데이타 전달 
+ href="라우터주소?변수1=값1&변수1=값1..."
+-->
+<a href="/result?data1=111&data2=222">result1</a><br/>
+<a href="/result?data1=홍길동&data2=이몽룡">result2</a><br/>
+<hr>
+<h2>form 태그 이용해서 데이타 전달</h2>
+<form action="/result">
+    <!-- name 값은 변수로 이용  -->
+    <input type="text" name="data1" placeholder="data1"/>
+    <br/>
+    <input type="text" name="data2" placeholder="data2"/>
+    <br/>
+    <button>확인</button>
+</form>
+    
+</body>
+</html>

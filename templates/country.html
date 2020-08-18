@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 출력하기</title>
+    <style>
+        /* table안의 모든 th 태그 디자인 */
+        table th { background-color:lightgray}
+        /* border-collapse : 셀병합디자인 */
+        table { border-collapse: collapse;}
+        /* table안의 모든 th, td 태그 디자인 */
+        /* border:굵기 색상 스타일 */
+        table th, table td { border: 1px solid gray; 
+                            padding:10px 50px}
+        h1, h2 { text-align:center }
+        /* 클래스 선택자  */
+        /* padding:상하 좌우 => 안쪽 여백 */
+        /* border-radius:모서리굴리기  */
+        .btn { background-color:black; color:white; 
+              padding:5px 10px; border-radius: 5px;
+              text-decoration: none; }
+
+        table td { text-align:center } 
+    </style>
+
+</head>
+<body>
+    <h1>{{temp_dic.Name}} Page</h1>
+    <hr>
+    <table cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <th>No</th>
+            <td>{{temp_dic.No}}</td>
+        </tr>
+        <tr>
+            <th>Code</th>
+            <td>{{temp_dic.Code}}</td>
+        </tr>
+        <tr>
+            <th>GNP</th>
+            <td>{{temp_dic.GNP}}</td>
+        </tr>
+        <tr>
+            <th>Population</th>
+            <td>{{temp_dic.Population}}</td>
+        </tr>   
+        <!-- colspan=숫자 셀합치기  -->
+        <tr>
+            <td colspan="2">
+            <a href="/" class="btn">첫번째 페이지로 이동</a>
+            </td>
+        </tr>     
+    </table>
+
+    
+</body>
+</html>

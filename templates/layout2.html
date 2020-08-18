@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>flask로 웹서버 만들기</title>
+    <style>
+        body{
+            background-color: lightpink;
+        }
+        a {
+            text-decoration: none;
+            color : black;
+            font-weight: bold;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        h1,p{text-align: center;}
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/data">DATA</a></li>
+        <li><a href="/bbs">BBS</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+    </ul>
+</div>
+<hr>
+<!-- 교체영역1-->
+<!-- <h1>페이지 제목</h1> -->
+{% block pageTitle %}{% endblock %}
+<hr>
+<!-- 교체 영역2 -->
+<!-- <div>컨텐츠 내용</div> -->
+{% block contents %}{% endblock %}
+<hr>
+<div>
+    <p>카피라이터</p>
+</div>
+</body>
+
+</html>

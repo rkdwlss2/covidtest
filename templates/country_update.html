@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레코드 추가</title>
+    <style>
+        /* 블록요소 스타일로 변경. 세로 레이아웃 */
+        label { display: block}
+        /* 모든 요소 중앙정렬 */
+        * { text-align: center;}
+    </style>
+</head>
+<body>
+<h1>레코드 수정</h1>
+<hr>
+<form action="/country_update_pro" method="post">
+    <!-- hidden 필드로 지정 : 화면에 보이지는 않는다.  -->
+    <input type="hidden" name="c_no" value={{ temp_dic.No }}>
+    <label>CODE : {{ temp_dic.Code }} </label>
+    <label>NAME : {{ temp_dic.Name }} </label>
+    <label>GNP <input type="text" name="c_gnp" id="c_gnp" 
+        value={{ temp_dic.GNP }} required ></label>
+    <label>POPULATION 
+       <input type="text" name="c_population" id="c_population" 
+       value={{ temp_dic.Population }} required></label>
+    <br>
+    <input type="submit" value="수정"> 
+    <input type="reset" value="취소"> 
+</form>
+<hr>
+<p><a href="/">첫페이지로 이동</a></p>
+</body>
+</html>

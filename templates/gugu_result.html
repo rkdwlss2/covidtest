@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 결과 확인하기</title>
+</head>
+<body>
+    <h1>구구단 결과 확인하기</h1>
+    <hr>
+    <h3>{{data3}} 출력하기</h3>
+    <ul>
+    {% for i in range(1,10) %}
+        <li>{{data3}} 곱하기 {{i}} 은?  {{data3*i}}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    <a href="/">첫번째 페이지로 이동하기</a>
+</body>
+</html>

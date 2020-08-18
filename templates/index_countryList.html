@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 출력하기</title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+
+
+    <!-- 사용자 정의 css파일 연결 -->
+    <!-- <link rel="stylesheet" href="/static/css/custom.css"> -->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>worldCity 테이블</h1>
+    <hr>
+    <!-- 검색폼  -->
+    <form action="/search_list">
+        <input type="text" name="country_name"
+             required placeholder="country_name">
+        <button class="btn-primary">검색</button>
+    </form>
+
+    <hr>
+    <!-- table>(tr>th*5) -->
+    <h2>총 레코드수 : {{totalCount}} </h2>
+    <hr>
+    <p class="add"><a href="/country_add" class="btn">레코드 추가</a></p>
+    <hr>
+    <table cellpadding="10" cellspacing="0" align="center" class="table table-bordered" width="80%">
+        <tr>
+            <th>No</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>GNP</th>
+            <th>Population</th>
+            <th>View</th>
+            <th>Delete</th>
+            <!-- 수정 제목셀 추가 -->
+            <th>Update</th>
+        </tr>
+        <!-- tr>td*5 -->
+        <!-- 딕셔너리.키로 접근 가능  -->
+        {% for temp_dic in country_list %}
+            <tr>
+                <td>{{temp_dic.No}}</td>
+                <td>{{temp_dic.Code}}</td>
+                <td>
+                     {{temp_dic.Name}}
+                </td>
+                <td>$ {{temp_dic.GNP}}</td>
+                <td>{{temp_dic.Population}}</td>
+                <!-- 각 레코드 상세 페이지로 이동하는 하이퍼링크 -->
+                <td><a href="/country/{{temp_dic.No}}" class="btn btn-primary">
+                    Datail Page</a></td>
+                <!-- 레코드 삭제 페이지로 이동하는 하이퍼링크 -->
+                <td><a href="/country_delete/{{temp_dic.No}}" class="btn btn-primary">
+                    Delete Page</a></td>
+                <!-- 레코드 수정 페이지로 이동하는 하이퍼링크 -->
+                <td><a href="/country_update/{{temp_dic.No}}" class="btn btn-primary">
+                    Update Page</a></td>    
+            </tr>
+        {% endfor %}
+    </table>
+
+    
+</body>
+</html>

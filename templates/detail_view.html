@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee detail page</title>
+    <style>
+        table th { background-color: lightgray;}
+        table {border-collapse: collapse;}
+        table th, table td{border: 1px solid darkblue;padding: 10px 50px}
+        h1,h2{text-align: center;}
+        .btn {background-color: black;color: whitesmoke;padding: 5px 10px;border-radius: 5px;text-decoration: none;}
+        table td{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>employee detail page</h1>
+    <table cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <th>no</th>
+            <td>{{emp_data.No}}</td>
+        </tr>
+        <tr>
+            <th>name</th>
+            <td>{{emp_data.first_name}}{{emp_data.last_name}}</td>
+        </tr>
+        <tr>
+            <th>gender</th>
+            <td>{{emp_data.gender}}</td>
+        </tr>
+        <tr>
+            <th>birth</th>
+            <td>{{emp_data.birth}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="btn"><a href="/">첫번째 페이지로 이동</a></td>
+        </tr>
+    </table>
+</body>
+</html>
