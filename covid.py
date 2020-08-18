@@ -23,7 +23,7 @@ def GoobneAddress(result):
         driver.execute_script("arguments[0].click();", a2)
         time.sleep(0.5)
         a2 = driver.find_element_by_xpath("//*[@class='Nnavi']")
-        # test
+        # test2
 
 
     #     div=td.find_element_by_class_name("name_area")
